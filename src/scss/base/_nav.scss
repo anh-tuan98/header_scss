@@ -1,0 +1,60 @@
+.nav-items {
+    float: right;
+    padding: 0;
+    margin-right: 150px;
+
+    .nav-item {
+        display: inline-block;
+    }
+
+        .nav-link {
+            padding: 20px;
+            color: #ffffff;
+            text-decoration: none; 
+        }    
+}
+.nav-link:hover {
+    border-bottom: 2px solid #ffffff;
+  }
+  .dropdown {
+    position: relative;
+
+    .arrow-down {
+        width:0px;
+        height:0px;
+        border-left:5px solid transparent;
+        border-right:5px solid transparent;
+        border-top:5px solid;
+        display: inline-block;
+        color: #ffffff;
+    }
+
+        .drop-items {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 12px 10px #00cdcd;
+            padding: 0px;
+            top: 35px;
+        }
+            .link {
+                color: rgb(0, 0, 0);
+                padding: 12px 10px;
+                text-decoration: none;
+                display: block;
+            }
+}
+.dropdown:hover .drop-items {
+    display: block;
+    .drop-item .link:hover {
+        color: #ffffff;
+        background-color: #00cdcd;
+    }
+}
+  
+.fox-logo {
+    display: inline-block;
+    padding: 10px;
+    margin-left: 150px;
+}
