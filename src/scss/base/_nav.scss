@@ -15,8 +15,9 @@
 }
 .nav-link:hover {
     border-bottom: 2px solid #ffffff;
-  }
-  .dropdown {
+}
+
+.dropdown {
     position: relative;
 
     .arrow-down {
@@ -47,6 +48,7 @@
 }
 .dropdown:hover .drop-items {
     display: block;
+
     .drop-item .link:hover {
         color: #ffffff;
         background-color: #00cdcd;
