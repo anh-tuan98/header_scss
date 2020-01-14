@@ -1,3 +1,10 @@
+// phần header
+.main-header {
+    background-color: #00cdcd;
+    overflow: auto;
+    height: 300px;
+}
+
 .nav-items {
     float: right;
     padding: 0;
@@ -13,6 +20,7 @@
             text-decoration: none; 
         }    
 }
+
 .nav-link:hover {
     border-bottom: 2px solid #ffffff;
 }
@@ -39,6 +47,7 @@
             padding: 0px;
             top: 35px;
         }
+        
             .link {
                 color: rgb(0, 0, 0);
                 padding: 12px 10px;
@@ -46,6 +55,7 @@
                 display: block;
             }
 }
+
 .dropdown:hover .drop-items {
     display: block;
 
@@ -59,4 +69,98 @@
     display: inline-block;
     padding: 10px;
     margin-left: 150px;
+}
+// phần 3 cục
+.contai {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    .area {
+      background-color: #00cdcd;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 300px;
+      width: 400px;
+      margin: 20px;
+      text-align: center;
+      padding: 40px;
+      position: relative;
+    }
+  
+    .title {
+      color: #ffffff;
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+  
+    .note {
+      color: #ffffff;
+      font-size: 18px;
+    }
+  
+    .sub-area {
+      height: 120px;
+      width: 120px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%);
+  
+        .icon {
+        margin: auto;
+        color: #00cdcd;
+        }
+    }
+  }
+
+.area:hover {
+    border-bottom: 2px solid rgb(255, 255, 0);
+  
+    .fas {
+      color: rgb(255, 255, 0);
+    }
+}
+// phần phone
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url(../images/gray-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+
+    .phone {
+        margin-left: 300px;
+        display: inline-block;
+    }
+
+    .explain {
+        margin: 0px 150px;
+        padding: 100px 0px;
+
+        .theme {
+            margin-bottom: 60px;
+        }
+
+        .theme-child {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .space {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
 }
