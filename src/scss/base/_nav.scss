@@ -71,10 +71,11 @@
     margin-left: 150px;
 }
 // phần 3 cục
-.contai {
+.clump {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0px 80px;
   
     .area {
       background-color: #00cdcd;
@@ -87,6 +88,7 @@
       text-align: center;
       padding: 40px;
       position: relative;
+      border: 2px solid transparent;
     }
   
     .title {
