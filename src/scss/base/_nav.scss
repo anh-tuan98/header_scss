@@ -3,6 +3,7 @@
     background-color: #00cdcd;
     overflow: auto;
     height: 300px;
+    padding: 50px 0px;
 }
 
 .nav-items {
@@ -17,7 +18,7 @@
         .nav-link {
             padding: 20px;
             color: #ffffff;
-            text-decoration: none; 
+            text-decoration: none;
         }    
 }
 
@@ -88,7 +89,7 @@
       text-align: center;
       padding: 40px;
       position: relative;
-      border: 2px solid transparent;
+      border: 3px solid transparent;
     }
   
     .title {
@@ -123,10 +124,10 @@
   }
 
 .area:hover {
-    border-bottom: 2px solid rgb(255, 255, 0);
+    border-bottom: 3px solid #F2CE5F;
   
     .fas {
-      color: rgb(255, 255, 0);
+      color: #F2CE5F;
     }
 }
 // phần phone
