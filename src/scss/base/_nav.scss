@@ -1,62 +1,96 @@
-.nav-items {
-    float: right;
-    padding: 0;
-    margin-right: 150px;
+// phần 3 cục
+.clump {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 100px 80px;
 
-    .nav-item {
-        display: inline-block;
-    }
-
-        .nav-link {
-            padding: 20px;
-            color: #ffffff;
-            text-decoration: none; 
-        }    
-}
-.nav-link:hover {
-    border-bottom: 2px solid #ffffff;
-}
-
-.dropdown {
+  .area {
+    background-color: #00cdcd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    margin: 20px;
+    text-align: center;
+    padding: 40px;
     position: relative;
+    border: 3px solid transparent;
+  }
 
-    .arrow-down {
-        width:0px;
-        height:0px;
-        border-left:5px solid transparent;
-        border-right:5px solid transparent;
-        border-top:5px solid;
-        display: inline-block;
-        color: #ffffff;
+  .title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  .note {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .sub-area {
+    height: 120px;
+    width: 120px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+
+    .icon {
+      margin: auto;
+      color: #00cdcd;
     }
-
-        .drop-items {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 120px;
-            box-shadow: 12px 10px #00cdcd;
-            padding: 0px;
-            top: 35px;
-        }
-            .link {
-                color: rgb(0, 0, 0);
-                padding: 12px 10px;
-                text-decoration: none;
-                display: block;
-            }
+  }
 }
-.dropdown:hover .drop-items {
-    display: block;
 
-    .drop-item .link:hover {
-        color: #ffffff;
-        background-color: #00cdcd;
-    }
+.area:hover {
+  border-bottom: 3px solid #f2ce5f;
+
+  .fas {
+    color: #f2ce5f;
+  }
 }
-  
-.fox-logo {
+// phần phone
+
+.main-phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-image: url(../images/gray-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+
+  .phone {
+    margin-left: 300px;
     display: inline-block;
-    padding: 10px;
-    margin-left: 150px;
+  }
+
+  .explain {
+    margin: 0px 150px;
+    padding: 150px 0px;
+
+    .theme {
+      margin-bottom: 60px;
+    }
+
+    .theme-child {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .space {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
 }
