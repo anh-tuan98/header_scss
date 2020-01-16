@@ -1,169 +1,227 @@
 // phần header
 .main-header {
-    background-color: #00cdcd;
-    overflow: auto;
-    height: 300px;
-    padding: 50px 0px;
-}
+  background-color: #00cdcd;
+  overflow: auto;
+  padding-top: 50px;
 
-.nav-items {
+  .nav-items {
     float: right;
     padding: 0;
     margin-right: 150px;
+  }
 
-    .nav-item {
-        display: inline-block;
+  .nav-item {
+    z-index: 2;
+    display: inline-block;
+    &:hover::after {
+      transform: scaleX(1);
     }
-
-        .nav-link {
-            padding: 20px;
-            color: #ffffff;
-            text-decoration: none;
-        }    
-}
-
-.nav-link:hover {
-    border-bottom: 2px solid #ffffff;
-}
-
-.dropdown {
+    &::after {
+      display: block;
+      content: "";
+      border-bottom: 2px solid #ffffff;
+      transform: scaleX(0);
+      transition: transform 1s ease;
+    }
+  }
+  .nav-link {
+    padding: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    top: 35px;
+  }
+  .dropdown {
     position: relative;
 
     .arrow-down {
-        width:0px;
-        height:0px;
-        border-left:5px solid transparent;
-        border-right:5px solid transparent;
-        border-top:5px solid;
-        display: inline-block;
-        color: #ffffff;
-    }
-
-        .drop-items {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 120px;
-            box-shadow: 12px 10px #00cdcd;
-            padding: 0px;
-            top: 35px;
-        }
-        
-            .link {
-                color: rgb(0, 0, 0);
-                padding: 12px 10px;
-                text-decoration: none;
-                display: block;
-            }
-}
-
-.dropdown:hover .drop-items {
-    display: block;
-
-    .drop-item .link:hover {
-        color: #ffffff;
-        background-color: #00cdcd;
-    }
-}
-  
-.fox-logo {
-    display: inline-block;
-    padding: 10px;
-    margin-left: 150px;
-}
-// phần 3 cục
-.clump {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 80px;
-  
-    .area {
-      background-color: #00cdcd;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 300px;
-      width: 400px;
-      margin: 20px;
-      text-align: center;
-      padding: 40px;
-      position: relative;
-      border: 3px solid transparent;
-    }
-  
-    .title {
+      width: 0px;
+      height: 0px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid;
+      display: inline-block;
       color: #ffffff;
-      font-size: 1.5rem;
-      padding: 20px;
     }
-  
-    .note {
-      color: #ffffff;
-      font-size: 18px;
-    }
-  
-    .sub-area {
-      height: 120px;
-      width: 120px;
-      background-color: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+
+    .drop-items {
+      display: none;
       position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translate(-50%);
-  
-        .icon {
-        margin: auto;
-        color: #00cdcd;
-        }
+      background-color: #f9f9f9;
+      max-width: 120px;
+      padding: 0px;
+      top: 35px;
+    }
+
+    .drop-item {
+      width: 120px;
+      text-align: start;
+    }
+
+    .link {
+      color: rgb(0, 0, 0);
+      padding: 12px;
+      text-decoration: none;
+      display: block;
     }
   }
 
-.area:hover {
-    border-bottom: 3px solid #F2CE5F;
-  
-    .fas {
-      color: #F2CE5F;
-    }
-}
-// phần phone
-
-.container {
+  .section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-image: url(../images/gray-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+    position: relative;
 
-    .phone {
-        margin-left: 300px;
-        display: inline-block;
+    .selection1 {
+      margin-left: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .explain {
-        margin: 0px 150px;
-        padding: 100px 0px;
-
-        .theme {
-            margin-bottom: 60px;
-        }
-
-        .theme-child {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .space {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+    .click {
+      padding: 15px 0px;
     }
+
+    .selection2 {
+      margin-right: 150px;
+      z-index: 1;
+    }
+
+    .title-child {
+      color: #fff;
+      margin-right: 300px;
+      max-width: 400px;
+    }
+
+    .succees {
+      font-size: 90px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 90px;
+    }
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 200px solid transparent;
+      border-right: 100vw solid #fff;
+      position: absolute;
+      z-index: 0;
+      bottom: 0px;
+    }
+  }
+}
+
+.dropdown:hover .drop-items {
+  display: block;
+
+  .drop-item .link:hover {
+    color: #ffffff;
+    background-color: #00cdcd;
+  }
+}
+
+.fox-logo {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 150px;
+}
+// phần 3 cục
+.clump {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 80px;
+
+  .area {
+    background-color: #00cdcd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    margin: 20px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    border: 3px solid transparent;
+  }
+
+  .title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  .note {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .sub-area {
+    height: 120px;
+    width: 120px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+
+    .icon {
+      margin: auto;
+      color: #00cdcd;
+    }
+  }
+}
+
+.area:hover {
+  border-bottom: 3px solid #f2ce5f;
+
+  .fas {
+    color: #f2ce5f;
+  }
+}
+// phần phone
+
+.main-phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-image: url(../images/gray-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+
+  .phone {
+    margin-left: 300px;
+    display: inline-block;
+  }
+
+  .explain {
+    margin: 0px 150px;
+    padding: 150px 0px;
+
+    .theme {
+      margin-bottom: 60px;
+    }
+
+    .theme-child {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .space {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
 }
